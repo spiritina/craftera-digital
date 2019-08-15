@@ -1,0 +1,34 @@
+@mixin mq($break-point) {
+    @media (max-width: $break-point ) {
+        @content;
+    }
+}
+
+@mixin mq-minh($break-point) {
+    @media (min-height: $break-point ) {
+        @content;
+    }
+}
+
+@mixin mq-maxh($break-point) {
+    @media (max-height: $break-point ) {
+        @content;
+    }
+}
+
+$min-height: 600px;
+$max-height: 800px;
+
+@mixin mq-h-bp($min-val, $val-between, $max-val, $property_name) {
+    @media (max-height: $min-height ) {
+        #{$property_name}: $min-val;
+    }
+
+    @media (min-height: $min-height + 1 ) and (max-height: $max-height ) {
+        #{$property_name}: $val-between;
+    }
+
+    @media (min-height: $max-height + 1 ) {
+        #{$property_name}: $max-val;
+    }
+}
