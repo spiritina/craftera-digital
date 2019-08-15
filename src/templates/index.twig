@@ -1,0 +1,67 @@
+---
+title: craftera digital
+namespace: homepage
+intro:
+  title: solution to grow
+  aboveTitle: Web and mobile
+  underTitle: your business
+aboutUs:
+  title: Who we are
+  subtitle: Digital agency with strong team and great skills
+  description: Our team has experience working with projects of varying complexity from landings to large online stores and mobile apps. You can entrust us with a complete cycle of creating a project for you including design, development and support.
+portfolio:
+  list:
+    - title: airstudio
+      description: Promo site dedicated to the social project of Nescafe. Was made for young startuppers, who obtained an opportunity to give a new life to their projects.
+      img: http://www.thebetterindia.com/wp-content/uploads/2014/07/Pic-1.jpg
+    - title: airstudio
+      description: Promo site dedicated to the social project of Nescafe. Was made for young startuppers, who obtained an opportunity to give a new life to their projects.
+      img: https://www.visitportugal.com/sites/www.visitportugal.com/files/mediateca/23_660x371.jpg
+    - title: airstudio
+      description: Promo site dedicated to the social project of Nescafe. Was made for young startuppers, who obtained an opportunity to give a new life to their projects.
+      img: https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
+prices:
+  title: Prices
+  description: We know how to create simple and powerful engine to solve your problems.
+  btnText: Lets discuss
+  list:
+    - label: Landing page from
+      price: 1200$
+    - label: Corporate from
+      price: 2800$
+    - label: Online store from
+      price: 4600$
+    - label: Custom solution
+      price: lets' discuss
+contacts:
+  title: Contacts
+  description: Let's get in touch
+  tel: +38(044) 337-67-02
+  mail: sales@knack.agency.com
+---
+
+{% extends 'layouts/_full-page.twig' %}
+
+{% block content %}
+  <div class="homepage">
+    <div class="fp-swiper-wrapper homepage-swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="homepage-swiper__item swiper-slide" data-active-theme="intro">
+          {% include "pages/homepage/_homepage-intro.twig" %}
+        </div>
+        <div class="homepage-swiper__item swiper-slide" data-active-theme="dark">
+          {% include "pages/homepage/_homepage-about-us.twig" %}
+        </div>
+        <div class="homepage-swiper__item swiper-slide" data-active-theme="light">
+          {% include "pages/homepage/_homepage-portfolio.twig" %}
+        </div>
+        <div class="homepage-swiper__item swiper-slide" data-active-theme="dark">
+          {% include "pages/homepage/_homepage-prices.twig" %}
+        </div>
+        <div class="homepage-swiper__item swiper-slide" data-active-theme="light">
+          {% include "pages/homepage/_homepage-contacts.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

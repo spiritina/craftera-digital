@@ -1,0 +1,27 @@
+{% import "mixins/_logo.twig" as logo %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#fff"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <link rel="stylesheet" media="all" href="css/app.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js" >
+  </script>
+</head>
+<body>
+
+{% include "components/_preloader.twig" %}
+{% include "components/_header.twig" %}
+
+{% block content %}{% endblock %}
+
+{% include "components/_footer.twig" %}
+
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

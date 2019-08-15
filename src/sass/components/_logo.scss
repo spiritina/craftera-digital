@@ -1,0 +1,39 @@
+.logo {
+
+  &__svg {
+    height: 100px;
+    overflow: visible;
+
+    @include mq($lg) {
+      height: 80px;
+    }
+
+    @include mq($md) {
+      height: 65px;
+    }
+
+    @include mq($sm) {
+      height: 50px;
+    }
+
+    @include mq($xs) {
+      height: 40px;
+    }
+  }
+
+  &__top {
+    fill: $primary-color;
+  }
+
+  &__bottom {
+    transition: fill 0.3s;
+
+    &[data-theme="light"] {
+      fill: #fff;
+    }
+
+    &[data-theme="dark"] {
+      fill: $black-color;
+    }
+  }
+}
